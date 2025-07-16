@@ -57,6 +57,10 @@ A modern Android application for managing Intune devices with a beautiful, intui
 3. **Configure MDM Settings**
    - Add your Azure AD Client ID to your MDM configuration
    - Deploy the app through your MDM solution
+  
+<img width="1512" height="750" alt="Screenshot 2025-07-16 at 14 39 48" src="https://github.com/user-attachments/assets/0da5f256-0809-434b-8537-d4d2f3a02710" />
+<img width="643" height="557" alt="Screenshot 2025-07-16 at 14 40 06" src="https://github.com/user-attachments/assets/a06dae39-d875-4e24-badf-410f38c21560" />
+
 
 4. **Build and Run**
    ```bash
@@ -101,13 +105,6 @@ app/
 - **Data Protection**: Secure token storage
 - **Enterprise Ready**: MDM deployment support
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
 
 ## 📄 License
 
