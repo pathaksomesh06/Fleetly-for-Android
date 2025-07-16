@@ -14,7 +14,7 @@ A modern Android application for managing Intune devices with a beautiful, intui
 
 ## 📱 Screenshots
 
-*Screenshots will be added here*
+
 
 ## 🛠️ Technology Stack
 
@@ -63,7 +63,7 @@ A modern Android application for managing Intune devices with a beautiful, intui
 
 ### Latest Release: v3.2 (Version Code 12)
 
-- **Download**: [Fleetly.apk](releases/Fleetly.apk)
+- **Download**: ([releases/Fleetly.apk](https://github.com/pathaksomesh06/Fleetly-for-Android/releases/tag/v))
 - **Release Date**: July 16, 2024
 - **Changes**:
   - Initial Android release
@@ -108,18 +108,6 @@ app/
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- Microsoft for Intune API and MSAL
-- Google for Jetpack Compose and Android development tools
-- The Android developer community
-
-## 📞 Support
-
-For support and questions:
-- Create an issue in this repository
-- Contact: [Your contact information]
 
 ---
 
