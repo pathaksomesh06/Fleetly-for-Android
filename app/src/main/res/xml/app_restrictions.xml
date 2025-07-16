@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<restrictions xmlns:android="http://schemas.android.com/apk/res/android">
+    <restriction
+        android:key="client_id"
+        android:title="@string/client_id_title"
+        android:restrictionType="string"
+        android:description="@string/client_id_description"
+        android:defaultValue="" />
+</restrictions> 

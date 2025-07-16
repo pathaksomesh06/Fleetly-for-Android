@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Fleetly</string>
+    
+    <!-- Authentication -->
+    <string name="welcome_title">Welcome to Fleetly</string>
+    <string name="welcome_subtitle">Manage your Intune devices with ease</string>
+    <string name="login_button">Sign In</string>
+    <string name="logout_button">Sign Out</string>
+    <string name="authentication_failed">Authentication failed</string>
+    <string name="please_try_again">Please try again</string>
+    
+    <!-- Onboarding -->
+    <string name="onboarding_title">Welcome to Fleetly</string>
+    <string name="onboarding_subtitle">Your Intune device management companion</string>
+    <string name="onboarding_description">Fleetly helps you manage and monitor your Intune devices from anywhere. Get real-time insights, perform actions, and stay in control of your device fleet.</string>
+    <string name="get_started">Get Started</string>
+    
+    <!-- Device List -->
+    <string name="devices_title">Devices</string>
+    <string name="search_devices">Search devices…</string>
+    <string name="no_devices_found">No devices found</string>
+    <string name="pull_to_refresh">Pull to refresh</string>
+    <string name="sync_all_devices">Sync All Devices</string>
+    <string name="loading_devices">Loading devices…</string>
+    
+    <!-- Device Details -->
+    <string name="device_details">Device Details</string>
+    <string name="device_name">Device Name</string>
+    <string name="device_type">Device Type</string>
+    <string name="os_version">OS Version</string>
+    <string name="compliance_status">Compliance Status</string>
+    <string name="last_sync">Last Sync</string>
+    <string name="enrollment_date">Enrollment Date</string>
+    <string name="user_principal_name">User Principal Name</string>
+    <string name="management_state">Management State</string>
+    <string name="jailbroken">Jailbroken</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="compliant">Compliant</string>
+    <string name="non_compliant">Non-compliant</string>
+    
+    <!-- Device Actions -->
+    <string name="device_actions">Device Actions</string>
+    <string name="sync_device">Sync Device</string>
+    <string name="wipe_device">Wipe Device</string>
+    <string name="retire_device">Retire Device</string>
+    <string name="fresh_start">Fresh Start</string>
+    <string name="rotate_admin_password">Rotate Admin Password</string>
+    <string name="collect_diagnostics">Collect Diagnostics</string>
+    <string name="delete_device">Delete Device</string>
+    <string name="restart_device">Restart Device</string>
+    <string name="shut_down_device">Shut Down Device</string>
+    <string name="remote_lock">Remote Lock</string>
+    <string name="autopilot_reset">Autopilot Reset</string>
+    <string name="bitlocker_recovery_keys">BitLocker Recovery Keys</string>
+    <string name="collect_diagnostic_data">Collect Diagnostic Data</string>
+    <string name="action_confirmation">Action Confirmation</string>
+    <string name="action_successful">Action completed successfully</string>
+    <string name="action_failed">Action failed</string>
+    
+    <!-- BitLocker -->
+    <string name="bitlocker_keys">BitLocker Recovery Keys</string>
+    <string name="recovery_key">Recovery Key</string>
+    <string name="volume_type">Volume Type</string>
+    <string name="drive_label">Drive Label</string>
+    <string name="created_date">Created Date</string>
+    <string name="no_bitlocker_keys">No BitLocker recovery keys found</string>
+    <string name="key_not_retrieved">Key not retrieved</string>
+    
+    <!-- LAPS -->
+    <string name="laps_credentials">LAPS Credentials</string>
+    <string name="local_admin_password">Local Admin Password</string>
+    <string name="password_expiry">Password Expiry</string>
+    <string name="no_laps_credentials">No LAPS credentials found</string>
+    
+    <!-- FileVault -->
+    <string name="filevault_key">FileVault Recovery Key</string>
+    <string name="no_filevault_key">No FileVault recovery key found</string>
+    
+    <!-- Settings -->
+    <string name="settings">Settings</string>
+    <string name="language">Language</string>
+    <string name="about">About</string>
+    <string name="version">Version</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="terms_of_service">Terms of Service</string>
+    
+    <!-- Errors -->
+    <string name="error_occurred">An error occurred</string>
+    <string name="network_error">Network error</string>
+    <string name="unauthorized_error">Authentication error. Please try logging in again.</string>
+    <string name="forbidden_error">You don\'t have permission to access this resource.</string>
+    <string name="not_found_error">The requested resource was not found.</string>
+    <string name="server_error">Server error occurred. Please try again.</string>
+    <string name="unexpected_error">An unexpected error occurred</string>
+    
+    <!-- Platform Selector -->
+    <string name="select_platform">Select Platform</string>
+    <string name="all_platforms">All Platforms</string>
+    <string name="windows">Windows</string>
+    <string name="mac">Mac</string>
+    <string name="ios">iOS</string>
+    <string name="android">Android</string>
+    <string name="device_information">Device Information</string>
+    <string name="management_status">Management Status</string>
+    <string name="owner_information">Owner Information</string>
+    <string name="manufacturer">Manufacturer</string>
+    <string name="model">Model</string>
+    <string name="owner_type">Owner Type</string>
+    
+    <!-- Common -->
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Confirm</string>
+    <string name="loading">Loading…</string>
+    <string name="retry">Retry</string>
+    <string name="close">Close</string>
+    <string name="copy">Copy</string>
+    <string name="copied">Copied to clipboard</string>
+    
+    <!-- Camera Permission -->
+    <string name="camera_permission_required">Camera access is needed to scan device QR codes for Autopilot configuration.</string>
+    <string name="grant_permission">Grant Permission</string>
+    <string name="permission_denied">Permission denied</string>
+    <string name="title_activity_kimera_main">kimera-main</string>
+    <string name="laps_password_retrieved">LAPS Password Retrieved</string>
+    <string name="laps_password_error">Could not retrieve LAPS password.</string>
+    <string name="bitlocker_keys_retrieved">BitLocker Keys Retrieved</string>
+    <string name="bitlocker_keys_error">Could not retrieve BitLocker keys.</string>
+    <string name="client_id_title">Client ID</string>
+    <string name="client_id_description">The Azure AD client ID for the application.</string>
+</resources> 
