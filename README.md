@@ -14,6 +14,10 @@ A modern Android application for managing Intune devices with a beautiful, intui
 
 ## 📱 Screenshots
 
+![image](https://github.com/user-attachments/assets/fc730789-daeb-4521-aba5-9ccfc8c1d315)
+![image](https://github.com/user-attachments/assets/e136f48e-03a3-4ddd-9f6d-3ad24e061096)
+![image](https://github.com/user-attachments/assets/ee6f6724-2827-4931-847e-43b6f6e5e20a)
+![Uploading image.png…]()
 
 
 ## 🛠️ Technology Stack
