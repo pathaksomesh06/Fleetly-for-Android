@@ -32,40 +32,54 @@ A modern Android application for managing Intune devices with a beautiful, intui
 - **Minimum SDK**: API 26 (Android 8.0)
 - **Target SDK**: API 34 (Android 14)
 
-## 📋 Prerequisites
+## 🏢 Enterprise Deployment
 
-- Android Studio Arctic Fox or later
-- JDK 17
-- Android SDK API 26+
-- Azure AD App Registration with proper permissions
+Fleetly is designed for enterprise deployment through Managed Google Play. The app is distributed as a pre-built APK with enterprise-grade security and MDM integration.
 
-## 🔧 Setup
+### 📦 Distribution Package
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/pathaksomesh06/Fleetly-for-Android.git
-   cd Fleetly-for-Android
-   ```
+**Current Version**: v3.2 (Version Code 12)
 
-2. **Configure Azure AD App Registration**
-   - Create an app registration in Azure Portal
-   - Add redirect URI: `msauth://com.themavericklabs.fleetly/[YOUR_SIGNATURE_HASH]`
+**APK Details**:
+- **Package Name**: `com.themavericklabs.fleetly`
+- **SHA1 Signature**: `65:1C:77:32:18:B4:16:D4:19:A1:DB:01:A1:54:6A:01:FE:B8:7A:B3`
+- **Base64 Signature Hash**: `ZRx3Mhi0FtQZodsBoVRqAf64erM=`
+
+### 🔧 Azure AD Configuration
+
+For each tenant deploying Fleetly, configure the following in Azure AD:
+
+1. **Create App Registration**
+   - Register a new application in Azure Portal
+   - Add redirect URI: `msauth://com.themavericklabs.fleetly/ZRx3Mhi0FtQZodsBoVRqAf64erM=`
    - Grant required permissions:
      - `User.Read`
      - `DeviceManagementManagedDevices.ReadWrite.All`
 
-3. **Configure MDM Settings**
-   - Add your Azure AD Client ID to your MDM configuration
-   - Deploy the app through your MDM solution
+2. **Note the Client ID** for MDM configuration
+
+### 📱 Managed Google Play Deployment
+
+1. **Upload APK**
+   - Upload the Fleetly APK to your Managed Google Play store
+   - Configure as a private app
+
+2. **Configure MDM Settings**
+   - Set app restriction `client_id` to your Azure AD Client ID
+   - Deploy to managed devices
+
+3. **App Restrictions Configuration**
+   ```xml
+   <restriction
+       android:key="client_id"
+       android:title="Azure AD Client ID"
+       android:restrictionType="string"
+       android:description="Enter your Azure AD App Registration Client ID"
+       android:defaultValue="" />
   
 <img width="1512" height="750" alt="Screenshot 2025-07-16 at 14 39 48" src="https://github.com/user-attachments/assets/0da5f256-0809-434b-8537-d4d2f3a02710" />
 <img width="643" height="557" alt="Screenshot 2025-07-16 at 14 40 06" src="https://github.com/user-attachments/assets/a06dae39-d875-4e24-badf-410f38c21560" />
 
-
-4. **Build and Run**
-   ```bash
-   ./gradlew assembleDebug
-   ```
 
 ## 📦 Releases
 
@@ -79,32 +93,40 @@ A modern Android application for managing Intune devices with a beautiful, intui
   - Full Intune device management capabilities
   - Enterprise-grade security with MSAL
 
-## 🏗️ Project Structure
+### 🔐 Security Features
 
-```
-app/
-├── src/main/
-│   ├── java/com/themavericklabs/fleetly/
-│   │   ├── auth/           # MSAL authentication
-│   │   ├── config/         # App configuration
-│   │   ├── data/           # Data models
-│   │   ├── network/        # API services
-│   │   ├── ui/             # UI components
-│   │   │   ├── screens/    # App screens
-│   │   │   ├── theme/      # Material 3 theme
-│   │   │   └── viewmodels/ # ViewModels
-│   │   └── FleetlyApplication.kt
-│   └── res/                # Resources
-└── build.gradle.kts        # App-level build config
-```
-
-## 🔐 Security
-
-- **Authentication**: Microsoft Authentication Library (MSAL)
+- **Pre-built APK**: No source code distribution required
+- **Signature Verification**: Consistent signature across all tenants
+- **MDM Integration**: Secure configuration through app restrictions
+- **Azure AD Authentication**: Enterprise-grade identity management
 - **Network Security**: HTTPS-only API calls
 - **Data Protection**: Secure token storage
-- **Enterprise Ready**: MDM deployment support
 
+## 🏗️ Architecture
+
+```
+Enterprise Deployment Flow:
+┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
+│   Azure AD      │    │  Managed Google  │    │   Intune MDM    │
+│ App Registration│    │      Play         │    │   Devices       │
+└─────────────────┘    └──────────────────┘    └─────────────────┘
+         │                       │                       │
+         │                       │                       │
+         ▼                       ▼                       ▼
+┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
+│  Client ID      │    │   Fleetly APK    │    │  App Restrictions│
+│  Redirect URI   │    │   (Pre-built)    │    │  Configuration  │
+└─────────────────┘    └──────────────────┘    └─────────────────┘
+```
+
+## 📋 Multi-Tenant Support
+
+Fleetly supports deployment across multiple tenants:
+
+- **Same APK**: Single APK works across all tenants
+- **Tenant Isolation**: Each tenant has independent configuration
+- **Centralized Updates**: Controlled APK distribution
+- **No Source Code**: Tenants only need the APK and configuration
 
 ## 📄 License
 
